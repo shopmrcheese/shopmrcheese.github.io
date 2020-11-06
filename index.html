@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        #body {
+            font-family: Verdana;
+            
+        }
+        #header {
+            background-color: yellow;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            left:0;
+            width: 100vw;
+            height: 10vh;
+        }
+        #verification {
+            display: block;
+            height: 100vh;
+            width: 100vw;
+            background-color: #E4E800;
+        }
+        #mainContentWrapper {
+            display: none;
+            
+        }
+        #formWrapper {
+          text-align:center;
+            height: 100vh;
+            width: 100vw;
+            margin-left: auto;
+    margin-right: auto;
+    width: 
+            display: inherit;
+        }
+        
+        
+    </style>
+   
+</head>
+<body>
+    <div id="verification">  <div id="formWrapper"><input type="text" id="verify-box" maxlength="30"> <div id="buttonWrapper"><button id="submit" onclick="unlock()">Submit</button></div></div></div>
+        <div id ="mainContentWrapper">
+ 
+    <div id="header"></div>
+<div id="main"><p style = "font-size: 100px">BIG CHUNGUS</p></div>
+    <div id="footer"></div>
+             </div>
+    
+    
+     <script>
+var passwordHashed = -314610215;
+         function unlock () {
+             document.getElementById("mainContentWrapper").style.display.block;
+             document.getElementById("verification").style.display.none;
+         }
+          function stringToHash(string) { 
+                  
+                var hash = 0; 
+                  
+                if (string.length == 0) return hash; 
+                  
+                for (i = 0; i < string.length; i++) { 
+                    char = string.charCodeAt(i); 
+                    hash = ((hash << 5) - hash) + char; 
+                    hash = hash & hash; 
+                } 
+                  
+                return hash; 
+            } 
+        function verify(){
+            var input = document.getElementById("verify-box").value;
+            if (input == passwordHashed){unlock();}
+        }
+              
+    </script>
+    
+</body>
