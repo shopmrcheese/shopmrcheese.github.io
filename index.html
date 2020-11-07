@@ -1,19 +1,20 @@
 <!DOCTYPE HTML>
 <head>
     <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         #body {
             font-family: Verdana;
-            background-color: #E4E800;
+            background-color: white;
         }
         #header {
             background-color: yellow;
-            position: -webkit-sticky;
+          
             position: sticky;
-            top: 0;
+        
             left:0;
             width: 100vw;
-            height: 10vh;
+            height: 15vh;
             border-style: ridge;
             border-color: black;
             
@@ -43,33 +44,108 @@
         
         #main {
             font-family: verdana;
-            background-color:#E4E800;
+            background-color:white;
+            
+            transition: 0.5s;
         }
-        #body {
-            background-color:#E4E800;
+           #link {
+            float:left;
+        }
+        #img1 {
+           right:80%;
+            right: 80vw;
+        }
+       #content {
+top:0px;
+   background-color: #E4E800;
+   width: 100%; /*fallback*/
+   width: 100vw;
+    height: 3%;
+   height:7vh;
+
+   font-family: Verdana;
+    margin:0;
+    /*Opacity start*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.80;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+    /*Opacity end*/
+    
+
+} 
+        #sidebar {
+            width: 0;
+            height: 100vh;
+            float: left;
+            background-color: black;
+            color: white;
+            z-index: 2;
+            position: fixed;
+            
+            display: block;
+            
+            
+        
+        
+        }
+        .animation{
+            animation-name:slide;
+            animation-duration:1s;
+            animation-play-state: paused;
+        }
+        #text1 {text-align: center;
+        }
+       
+
+@keyframes slide {
+    from {left: -30vw;}
+  to {left: 0;
+    display:block;
+  }
+    @keyframes goback {
+    from {left: 0;}
+  to {left: -30vw;
+    display:none;
+  }
+    
         }
     </style>
    
 </head>
 <body>
-    <div id="verification"> <input type="text" id="verify-box" maxlength="30"> <div id="buttonWrapper"><button id="submit" onclick="verify()">Submit</button></div></div>
+    <div id="verification"> <input type="text" id="verify-box" maxlength="30"> <div id="buttonWrapper"><button id="submit" onclick="unlock()">Submit</button></div></div>
         <div id ="mainContentWrapper">
  
-    <div id="header"><button id="hamburger" width="9vh" height = "9vh"><img id="hamburgerButton" src="Hamburger_icon.svg.png" height="9vh" width = "9vh" style="background-color: #E4E800;"/></button> <h1>shopmrcheese</h1></div>
+    <header>
+<div id="content">  
+    <div id="link"> <a onclick = "sidebarToggle()"><div id="img1" onclick=""><img src="Hamburger_icon.svg.png" height="40px" width="40px" style="left: 50px;"/></div></a></div><p>  </p>
+   
+    <h3 style="color: white; font-size:30px; text-align: center;">shopmrcheese</h3>
+    </div>
+ </header>
+   <div id="sidebar" class="animation"></div>         
 <div id="main">
-            
-            <h1>Welcome!</h1> <br/>
-    <p>This website is dedicated to a very special person (our victim). <br/>This website is used to sell his merch and annoy him.<br/>
+            <div id="text1">
+            <h1>Welcome!</h1> 
+    <p style="font-size: 20px">This website is dedicated to a very special person (our victim). <br/>This website is used to sell his merch and annoy him.<br/>
         There will be free sticker packs and many other features that he disapproves.  </p> <h2>Enjoy!</h2>
-    <br/>
-              <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>  <br/>
+                <br/></div>
+            
             </div>
     <div id="footer"></div>
              </div>
     
     
      <script>
+         
+        
+// reset the transition by...
+
 var passwordHashed = -314610215;
+         var mainContent = document.getElementById("main");
+          
          function unlock () {
              var verification = document.getElementById("verification");
              var mainContentWrapper = document.getElementById("mainContentWrapper");
@@ -90,12 +166,28 @@ var passwordHashed = -314610215;
                   
                 return hash; 
             } 
+      
         function verify(){
             var input = stringToHash(document.getElementById("verify-box").value);
             
             if (input == passwordHashed){unlock();}
         }
+             
+                 var sidebarClosed = true;
+         var sidebar = document.getElementById("sidebar");
+         function sidebarToggle () {
+             if (sidebarClosed === true){
+               sidebar.style.width = "30vw";
+                   mainContent.style.marginLeft = "30vw"; 
+                 
+             } else if (sidebarClosed === false)
+             {    sidebar.style.width = "0";
+              mainContent.style.marginLeft = "0";
               
+             } 
+         }
+         
+         
     </script>
     
 </body>
