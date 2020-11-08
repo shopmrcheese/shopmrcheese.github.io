@@ -112,7 +112,7 @@ top:0px;
             background-color: black;
             color: white;
             bottom:0;
-            border-color: goldenrod;
+            border-color: #c79d1e;
             border-width: 5px;
             border-style: solid;
             float:left;
@@ -148,9 +148,11 @@ top:0px;
     </div>
  </header>
    <div id="sidebar"><ul>
+       <li><a href="#">Home</a></li>
        <li><a href="#">Merch</a></li>
-       <li><a href="#">About</a></li>
-       <li></li></ul></div>         
+       <li><a href="">Sticker Packs</a></li>
+       <li><a href="">Contact</a></li>
+            <li><a href="">Policies</a></li></ul></div>         
 <div id="main">
             <div id="text1">
             <h1>Welcome!</h1> 
@@ -228,11 +230,24 @@ var passwordHashed = -314610215;
              var mainContent = document.getElementById("main");
                  const sidebar = document.getElementById("sidebar");
                var sidebarClosed = true;
-    function toggleSidebar(){
-       if(sidebarClosed==true) {openSidebar();} else {closeSidebar();} 
+     function toggleSidebar(){
+           /* -------------------------------------------------------------------------
+                ---------------------------------- computer code---------------------------
+                 --------------------------------------------------------------------------*/
+        if(window.mobileCheck == false){
+       if(sidebarClosed==true) {openSidebarComputer();} else {closeSidebarComputer();} 
               
-                 }
-        function openSidebar(){
+                 } else {
+                          /*  -------------------------------------------------------------------------
+                ---------------------------------- mobile code-------------------------------
+                 -------------------------------------------------------------------------- */
+        
+    
+             if(sidebarClosed==true) 
+             {openSidebarMobile();} else {closeSidebarComputer();} 
+                     
+                 }}
+        function openSidebarComputer(){
             
                 
                 sidebar.style.width = "30vw";
@@ -246,7 +261,7 @@ var passwordHashed = -314610215;
 
                  
              } 
-             function closeSidebar(){
+             function closeSidebarComputer(){
                   sidebar.style.width = "0";
               mainContent.style.marginLeft = "0";
                  sidebarClosed= true;
@@ -259,38 +274,23 @@ var passwordHashed = -314610215;
            
            
              } 
-     
-     
-               /* advanced detction
-               -------------------------------------------------------------------------
-                ---------------------------------- computer code---------------------------
-                 --------------------------------------------------------------------------*/
-           /*  if (window.mobileCheck === false){
-             if (sidebarClosed === true){
-               sidebar.style.width = "30vw";
-                   mainContent.style.marginLeft = "30vw"; 
-                 
-             } else if (sidebarClosed === false) {   
-                 sidebar.style.width = "0";
-              mainContent.style.marginLeft = "0";
-              
-             } 
-              /*  -------------------------------------------------------------------------
-                ---------------------------------- mobile code-------------------------------
-                 --------------------------------------------------------------------------
-         } else if (window.mobileCheck === true) {
-             if (sidebarClosed === true){
-               sidebar.style.width = "100vw";
-              
-                 
-             } else if (sidebarClosed === false) {    
-                 sidebar.style.width = "0";
-             } 
+                         }}
+        function openSidebarMobile(){
+            
+                
+                sidebar.style.width = "100vw";
+                   mainContent.style.marginLeft = "100vw"; 
+            sidebarClosed= false;
+                   console.log("Sidebar is closed: " + toString(sidebarClosed))
+            
+       
+          
              
-         }
-          */
-    
 
+                 
+             } 
+     
+  
                                                                    
          
          
