@@ -209,8 +209,12 @@ top:0px;
 
 		</footer>
              </div>
+    
         <script>
-         
+         window.onload = function (){var signIn =Cookies.get("signIn");
+                                   if (signIn != "true"){
+                                        
+                                   } else {unlock();}}
         
 // declare th detect mobile function
 function detectMob() {

@@ -116,18 +116,30 @@ top:0px;
             height:20%;
              text-align: center;
         }
-        .links1 {
+             .links1 {
             color: white;
+               text-decoration-line: none;
+               font-size: 2.5vw;
+               padding: 5px;
         }
          .links1:visited {
          color: white;
         }
         .links1:hover {
+            text-align: center;
+            transition: 0.5s;
             color: white;
-            transition: 1s;
+         
          background-color: black;
             border-color: #c79d1e;
             border-radius: 15px;
+            border-style: solid;
+             display: inline-block;
+  
+
+            font-size: 3vw;
+            padding: 15px;
+            
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -145,7 +157,7 @@ top:0px;
 </head>
 <body> 
     <script>window.onload = function (){var signIn =Cookies.get("signIn");
-                                   if (signIn != true){
+                                   if (signIn != "true"){
                                         location.replace("index.html")
                                    } else {document.getElementById("mainContentWrapper").style.display = "block";}}
     </script>
@@ -163,11 +175,11 @@ top:0px;
     </div>
  </header>
    <div id="sidebar">
-       <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Home</b></a></li>
-       <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Merch</b></a></li>
-       <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Sticker Packs</b></a></li>
-       <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Contact</b></a></li>
-       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Policies</b></a></li></div>   
+     <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
+       <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
+       <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
+       <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
+       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div> 
             
             <div id="mainContent">
         
