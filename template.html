@@ -10,7 +10,7 @@
       
     
         #mainContentWrapper {
-            display: block;
+            display: none;
             font-family: verdana;
         }
       
@@ -116,34 +116,21 @@ top:0px;
             height:20%;
              text-align: center;
         }
-           .links1 {
+        .links1 {
             color: white;
-               text-decoration-line: none;
-               font-size: 2.5vw;
-               padding: 5px;
         }
          .links1:visited {
          color: white;
         }
         .links1:hover {
-            text-align: center;
-            transition: 0.5s;
             color: white;
-         
+            transition: 1s;
          background-color: black;
             border-color: #c79d1e;
             border-radius: 15px;
-            border-style: solid;
-             display: inline-block;
-  
-
-            font-size: 3vw;
-            padding: 15px;
-            
         }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- req scripts -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJMB272K3V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -152,16 +139,22 @@ top:0px;
 
   gtag('config', 'G-FJMB272K3V');
 </script>
-    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <!--Cookie API-->
+   <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+   
 </head>
 <body> 
+    <script>window.onload = function (){var signIn =Cookies.get("signIn");
+                                   if (signIn != true){
+                                        location.replace("index.html")
+                                   } else {document.getElementById("mainContentWrapper").style.display = "block";}}
+    </script>
  
-
- 
-      
+    
+  
+        <div id ="mainContentWrapper">
             
- <div id="mainContentWrapper">
+ 
     <header id = "header">
 <div id="content">  
     <div id="link" onclick="toggleSidebar()"><div id="img1"><img src="Hamburger_icon.png" height="40px" width="40px" style="left: 50px;" id="HamburgerButton"/></div></div><p>  </p>
@@ -170,117 +163,23 @@ top:0px;
     </div>
  </header>
    <div id="sidebar">
-     <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
-       <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
-       <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
-       <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
-       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div>         
-            <style>      #here {
-            color:#a9a9a9
-        }
-        .do {background-color: black;
-            font-family: Verdana;
-            text-align: center;
-            color: white;
-            margin-left: auto;
-            margin-right: auto;
-            font-size: 15%;
-            padding: 10px;
-            border: 40px;}
-        #doButton9090key9 {
-          margin: auto;  
-        }
-      
-        #buttonExitDiv9 {
-            top: 0;
-            float: right;
+       <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Home</b></a></li>
+       <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Merch</b></a></li>
+       <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Sticker Packs</b></a></li>
+       <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Contact</b></a></li>
+       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: 3vw;">Policies</b></a></li></div>   
             
-        }
-        #modal_container {
-            border-width: thick;
-            height:28vh;
-            
-            background-color: white;
-            font-family: Verdana;
-            text-align: center;
-            color: black;
-            font-size: 20px;
-            padding: 10px;
-            border: 40px;
-            margin: 3px 1px;
-            width:70vw;
-            margin: auto;
-            z-index:900;
-            position:fixed;
-            bottom:35vh;
-            left:15vw;}
-             #img {
-           right:50%;
-            right: 50vw;
-        }
-        #popup {
-            display: none;
-                }</style><div id="popup">  <div id="modal_container" class="modal_container" style="z-index: 555;
-        border-color:#FFCA28;
-border-width: 3px; /* this allows you to adjust the thickness */
-border-style: solid;"><div class="modal_content"><div class="esc-size-guide"><h5 class="esc-size-guide--title" id="here1">Ooops!</h5>
-<h6 id="here"></h6><div id="buttonExitDiv9"><button id="exitPopupButton9" onclick="contents.fadeOut(300);" style="border-radius: 0px;
-        background-color: black; color: white; text-align:center; width:6vw;   height:4vh;right:33vw; margin:auto; position:absolute;" >OK</button>
-    <br/>
-            <br/></div></div></div></div></div>
-            
-            
-            
-      
-          
-    
-<div id="main">
-    <h1 style = "text-align:center">Mr Cheese Merchandise</h1>
-    
-                <style>
-                  #mainContent {
-            font-family: verdana;
-        }
-                    .itemMainBox {
-                        
-                    }
-                    .itemImage {
-                        
-                    }
-                    .description {
-                        
-                    }
-                    .buttonSpace {
-                        
-                    }
-                    
-        </style>
-         
-       
-                <li class="itemMainBox" id="bowDownMortal">
-                    <img src="images/bow_down_mortal_hoodie.jpeg"/>
-                    <div class="description"></div>
-                    <div class="buttonSpace"></div>
-    </li>
+            <div id="mainContent">
         
-          
-    
-    
-    
-    
-    
-    
+            
+            
+            
             </div>
-     <script>window.onload = function (){var signIn =Cookies.get("signIn");
-                                   if (signIn != "true"){
-                                        location.replace("index.html")
-                                   } else {document.getElementById("mainContentWrapper").style.display = "block";}}
-    </script>
-        <script>
+              <script>
          
         
-// declare the detect mobile function
- function detectMob() {
+// declare th detect mobile function
+function detectMob() {
     return ( window.innerHeight > window.innerLength );
   }
 var passwordHashed = -314610215;
@@ -294,14 +193,14 @@ var passwordHashed = -314610215;
             -----------------------sidebar click-----------------------
             ------------------------------------------------------------*/
             
-             var mainContent = document.getElementById("main");
+             var mainContent = document.getElementById("mainContent");
                  const sidebar = document.getElementById("sidebar");
                var sidebarClosed = true;
      function toggleSidebar(){
            /* -------------------------------------------------------------------------
                 ---------------------------------- computer code---------------------------
                  --------------------------------------------------------------------------*/
-        if(detectMob() == false){
+        if(detectMob == false){
        if(sidebarClosed==true) {openSidebarComputer();} else {closeSidebarComputer();} 
               
                  } else {
@@ -338,7 +237,16 @@ var passwordHashed = -314610215;
              }   
          
     </script>
- 
+    
+<div id="main">
+          
+    
+    
+    
+    
+    
+    
+            </div>
     <footer class="footer-basic-centered">
 
 			
