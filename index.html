@@ -21,7 +21,7 @@
       
         #verify-box {
             width: 30vw;
-            
+            margin: auto;
             text-align: center;
             
         }
@@ -130,6 +130,10 @@
             padding: 20px;
             
         }
+        #verification {
+            width: 100vw;
+            margin: auto;
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJMB272K3V"></script>
@@ -147,7 +151,7 @@
 <body> 
  
     
-    <div id="verification"> <input type="text" id="verify-box" maxlength="30" style="text-align:center"> <div id="buttonWrapper"><button id="submit" style="text-align: center; background-color: ">Submit</button></div></div>
+    <div id="verification"> <div style="width:30vw; margin: auto"><input type="text" id="verify-box"  maxlength="30" style="text-align:center; width:30vw; height: 20vh; margin: auto; font-size: 2.5vw;" placeholder="Enter passcode..."/> <br/><div style="height: 5vh;"></div><div id="buttonWrapper" style="width:20vw; margin: auto;"><button id="submit" style="text-align: center; background-color:#4CAF50; font-family: verdana; border-radius: 0; border-style:solid;border-color: #4CAF50; color: white; height:10vh; width: 20vw; padding-left:5vw; padding-right:5vw; padding-top: 10hw; padding-bottom: 10hw; margin: auto; font-size:2.5vw;">Submit</button></div><p id="updateP" style="text-align: center; font-family: verdana; font-size: 2vw;">The passcode is to ensure no <b>scammers</b> or <b>cheeters</b> can come into the website. <br/> Thank you!</p></div></div>
         <div id ="mainContentWrapper">
  
        <header id = "header">
@@ -244,6 +248,11 @@ var passwordHashed = -314610215;
                   
                 return hash; 
             } 
+            var i=1;
+            function add1(){
+                ++i;
+                console.log(i);
+            }
       /* -------------------------------------------------------------------
       ------------------------------------verify----------------------------
       ---------------------------------------------------------------------------*/
@@ -252,7 +261,43 @@ var passwordHashed = -314610215;
             var input = stringToHash(document.getElementById("verify-box").value);
             
             if (input == passwordHashed){unlock();
-                                        Cookies.set('signIn', "true", { expires: 2 });}
+                                        Cookies.set('signIn', "true", { expires: 2 });} else {
+                                            document.getElementById("updateP").innerHTML="Wrong passcode.";
+                                            add1();
+                                         
+                                            if (i > 10){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="C'mon, you've already gotten it wrong " + i + " times";
+                                            }
+                                             if (i > 20){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="Are you trying to be a <b>cheeter</b>?";
+                                            }
+                                             if (i > 30){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="Is the password that hard?";
+                                            }
+                                             if (i > 40){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="Or are you just spamming the button?";
+                                            }
+                                             if (i > 41){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="Fine, I'll give you the password.";
+                                            }
+                                             if (i > 42){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="It's your school email password.";
+                                            }
+                                             if (i > 43){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="haha you fel 4 it hav fun getin scam";
+                                            }
+                                             if (i > 44){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="C'mon, you've already gotten it wrong " + i + " times";
+                                            }
+                                        }
         })
              
             /* -----------------------------------------------------------------
@@ -262,7 +307,7 @@ var passwordHashed = -314610215;
              var mainContent = document.getElementById("main");
                  const sidebar = document.getElementById("sidebar");
                var sidebarClosed = true;
-     function toggleSidebar(){
+  
            /* -------------------------------------------------------------------------
                 ---------------------------------- computer code---------------------------
                  --------------------------------------------------------------------------*/
