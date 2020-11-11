@@ -248,10 +248,10 @@ var passwordHashed = -314610215;
                   
                 return hash; 
             } 
-            var i=1;
+            var i=0;
             function add1(){
-                ++i;
-                console.log(i);
+                i++;
+             
             }
       /* -------------------------------------------------------------------
       ------------------------------------verify----------------------------
@@ -260,8 +260,9 @@ var passwordHashed = -314610215;
  
             var input = stringToHash(document.getElementById("verify-box").value);
             
-            if (input == passwordHashed){unlock();
-                                        Cookies.set('signIn', "true", { expires: 2 });} else {
+            if (input == backupPassword){unlock();
+                                        Cookies.set('signIn', "true", { expires: 1 });} 
+          else {
                                             document.getElementById("updateP").innerHTML="Wrong passcode.";
                                             add1();
                                          
@@ -293,7 +294,19 @@ var passwordHashed = -314610215;
                                                 document.getElementById("verification").style.backgroundColor="red";
                                                     document.getElementById("updateP").innerHTML="haha you fel 4 it hav fun getin scam";
                                             }
+                                            
                                              if (i > 44){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="C'mon, you've already gotten it wrong " + i + " times";
+                                            }
+                                               if (i > 100){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="honestly at this point you're using this to help you count";
+                                            }   if (i > 101){
+                                                document.getElementById("verification").style.backgroundColor="red";
+                                                    document.getElementById("updateP").innerHTML="Go back to preschool";
+                                            }
+                                               if (i > 102){
                                                 document.getElementById("verification").style.backgroundColor="red";
                                                     document.getElementById("updateP").innerHTML="C'mon, you've already gotten it wrong " + i + " times";
                                             }
