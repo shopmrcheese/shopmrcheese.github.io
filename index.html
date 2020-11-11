@@ -134,6 +134,14 @@
             width: 100vw;
             margin: auto;
         }
+         #mainContent {
+       
+            background-color:white;
+            
+            transition: 0.5s;
+            z-index:1;
+             min-height: 80vh;
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJMB272K3V"></script>
@@ -186,8 +194,10 @@ position: fixed;
        <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
        <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
        <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div>        
-<div id="main">
+<div id="mainContent">
+    <div style="height:10vh"></div>
             <div id="text1">
+            
             <h1>Welcome!</h1> 
     <p style="font-size: 20px">This website is dedicated to a very special person (our victim). <br/>This website is used to sell his merch and annoy him.<br/>
         There will be free sticker packs and many other features that he disapproves.  </p> <h2>Enjoy!</h2>
@@ -317,7 +327,7 @@ var passwordHashed = -314610215;
             -----------------------sidebar click-----------------------
             ------------------------------------------------------------*/
             
-             var mainContent = document.getElementById("main");
+             var mainContent = document.getElementById("mainContent");
                  const sidebar = document.getElementById("sidebar");
                var sidebarClosed = true;
   
