@@ -4,16 +4,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
     <style>
+      
+        #footer {
+              background-color: black;
+            color: white;
+    
+            border-color: #c79d1e;
+            border-width: 5px;
+            border-style: solid;
+            position: absolute;
+            text-align: center;
+         
+           
+            bottom:0;
+         
+            width: 100vw;
+            height:17vh;
+        }
+        #contentWrap {
+            padding-bottom: 14vh;
+        }
+         #mainContentWrapper {
+            display: block;
+            font-family: verdana;
+              min-height: 100%;
+             position: relative;
+        }
+          #main {
+            font-family: verdana;
+            background-color:white;
+            
+            transition: 0.5s;
+            z-index:1;
+           
+        
+        }
+        
         #body {
             font-family: Verdana;
             background-color: white;
         }
       
     
-        #mainContentWrapper {
-            display: block;
-            font-family: verdana;
-        }
+       
       
         #verify-box {
             width: 30vw;
@@ -27,13 +60,7 @@
             text-align: center;
         }
         
-        #main {
-            font-family: verdana;
-            background-color:white;
-            
-            transition: 0.5s;
-            z-index:1;
-        }
+      
            #link {
             float:left;
         }
@@ -60,7 +87,8 @@
         
         }
        
-        #text1 {text-align: center;
+        #text1 {
+            text-align: center;
         }
        
 
@@ -79,23 +107,7 @@
             color:greenyellow;
             text-decoration: none;
         }
-         footer {
-            height:0.9%;
-            
-            width:99.2%;
-            width:99.2vw;
-            background-color: black;
-            color: white;
-            bottom:0;
-            border-color: #c79d1e;
-            border-width: 5px;
-            border-style: solid;
-            float:left;
-            right: 5vw;
-            height:20vh;
-            height:20%;
-             text-align: center;
-        }
+      
            .links1 {
             color: white;
                text-decoration-line: none;
@@ -120,10 +132,11 @@
              display: inline-block;
   
 
-            font-size: 4vw;
+            font-size: 4vh;
             padding: 20px;
             
         }
+        
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!-- req scripts -->
@@ -145,6 +158,7 @@
       
             
  <div id="mainContentWrapper">
+     <div id="contentWrap">
     <header id = "header">
         <style> #content {
 top:0px;
@@ -170,14 +184,68 @@ position: fixed;
    
     </div>
  </header>
-   <div id="sidebar">
+   <div id="sidebar" style="display:none;">
        <br/>
        <div style="height: 7vh;"></div>
      <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
        <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
        <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
        <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
-       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div>         
+       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div>   
+         <div id="mobileSidebar">
+       <br/>
+       <div style="height: 7vh;"></div>
+     <li><a class="links1Mob" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
+       <li><a class="links1Mob" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
+       <li> <a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
+       <li ><a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
+       <li><a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li>
+         <style>
+              #mobileSidebar {
+            width: 0;
+            height: 100vh;
+            float: left;
+            background-color: black;
+            color: white;
+            z-index: 99;
+            position: fixed;
+            
+            display: block;
+            transition: 0.5s;
+             overflow-x: hidden;
+            text-align:center;
+     
+        
+        
+        }
+              .links1Mob {
+            color: white;
+               text-decoration-line: none;
+               font-size: 4vh;
+               padding-top:15px;
+            
+               border-style:none;
+                  display: inline-block;
+        }
+         .links1Mob:visited {
+         color: white;
+        }
+        .links1Mob:hover {
+            text-align: center;
+            transition: 0.5s;
+            color: white;
+         
+         background-color: black;
+            border-color: #c79d1e;
+            border-radius: 15px;
+            border-style: solid;
+             display: inline-block;
+  
+
+            font-size: 7vh;
+            padding: 20px;
+            
+        }</style></div>    
             <style>      #here {
             color:#a9a9a9
         }
@@ -311,49 +379,56 @@ border-style: solid;"><div class="modal_content"><div class="esc-size-guide"><h5
         <style>   
            
                     .itemMainBoxMobile {
-                        border-style:solid;
-                        border-width:1vw;
-                        border-color: #c79d1e;
-                        width: 80vw;
-                        
-                        margin: auto;
-                    
+                     
                     }
                     .itemImageMobile {
                       margin-left: 3vw;
-                      width: 565px;
-                        height: 687px;
+                      width: 100vw;
+                  
                         border-style:solid;
                     border-color: black;
+                       
+                        left:0;
                     }
                     .descriptionMobile {
-     margin-left: 50vw;
-                        position: absolute;
-                  
-                        margin-top:-75vh;
+     
+                        position: static;
+                  width: 100vw;
+                     
                         text-align: center;
-                        width: 28vw;
+                    
            
                           font-family: 'Open Sans', sans-serif;
                     border-style: none;
                         border-color: aqua;
-                        font-size: 1.3vw;
+                        font-size: 1.3vh;
+                        left:0;
+                        top:80vh;
                     }
                     .buttonSpaceMobile {
-                        bottom: 15vh;
+                      
                     }
                     .itemType {
                      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,700&display=swap');
                         font-family: "Open Sans", sans-serif;
                     }
                     .decriptionParaMobile {
-                        width: 24vw;
+                        width: 100vw;
+                        
                     }</style>
          <div class="itemMainBoxMobile" id="bowDownMortal">
                       
                     <img src="images/bow_down_mortal_hoodie.jpeg" class="itemImageMobile"/>
-                    <div class="descriptionMobile"><h2><b>Bow Down Mortal</b></h2>
-                    <h3><b style="">Hoodie</b></h3><p>Ever wanted to feel like you were a king? <br/> Ever wanted to let people know that you're truly superior? <br/>Wait no more, the hoodie is the best one for you!<br/> <b>Swag</b> your dominance over your friends with this hoodie, with a trademark <i>Mr Chee</i> pointing at your victim, reminding your friends that they are nothing but <b>mere peasants.</b><br/> <br/>All for the cheap price of <b>SGD $10</b>.<br/><br/> What are you waiting for?<br/>Get yours now!</p> <br/><br/>
+                    <div class="descriptionMobile">
+                        <h2><b>Bow Down Mortal</b></h2>
+                    <h3><b style="">Hoodie</b></h3>
+                        <p>Ever wanted to feel like you were a king? <br/> 
+                        Ever wanted to let people know that you're truly superior? 
+                        <br/>Wait no more, the hoodie is the best one for you!<br/> 
+                        <b>Swag</b> your dominance over your friends with this hoodie, with a trademark <i>Mr Chee</i> gesturing at your victim, reminding your friends that they are nothing but <b>mere peasants.</b><br/> 
+                        <br/>All for the cheap price of <b>SGD $10</b>.<br/>
+                        <br/> What are you waiting for?
+                        <br/>Get yours now!</p> <br/><br/>
                         <div class="buttonSpaceMobile"><form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="4EG2M9SP4C97Y">
@@ -362,7 +437,7 @@ border-style: solid;"><div class="modal_content"><div class="esc-size-guide"><h5
 </form>
 </div></div>
     </div>
-    
+    <div style="height:14vh"></div>
     
     
             </div>
@@ -370,15 +445,39 @@ border-style: solid;"><div class="modal_content"><div class="esc-size-guide"><h5
                                    if (signIn != "true"){
                                         location.replace("index.html")
                                    } else {document.getElementById("mainContentWrapper").style.display = "block";}}
+      
+        
     </script>
         <script>
-         
-        
-// declare the detect mobile function
+          const sidebar = document.getElementById("sidebar");
+            const mobileSidebar = document.getElementById("mobileSidebar");
 
-var passwordHashed = -314610215;
-        
-          
+             window.onload = function(){  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+ const isMobile = true;
+             console.log(isMobile);
+                 document.getElementById("mobileVersion").style.display = "block";
+                 document.getElementById("computerVersion").style.display = "none";
+                
+                   
+    console.log( "Computer version " + document.getElementById("computerVersion").style.display)
+    console.log( "Mobile version " + document.getElementById("mobileVersion").style.display)
+                 document.getElementById("mobileSidebar").style.display= "block";
+                       document.getElementById("sidebar").style.display= "none";
+                 
+                 
+}else{
+  // false for not mobile device
+const isMobile = false;
+console.log(isMobile)
+      document.getElementById("mobileVersion").style.display = "none";
+                 document.getElementById("computerVersion").style.display = "block";
+  
+    console.log("Computer version " +  document.getElementById("computerVersion").style.display)
+    console.log("Mobile version " +  document.getElementById("mobileVersion").style.display)
+      document.getElementById("mobileSidebar").style.display= "none";
+                       document.getElementById("sidebar").style.display= "block";
+}}
 
  
      
@@ -388,20 +487,21 @@ var passwordHashed = -314610215;
             ------------------------------------------------------------*/
             
              var mainContent = document.getElementById("main");
-                 const sidebar = document.getElementById("sidebar");
+                
                var sidebarClosed = true;
      function toggleSidebar(){
-        
+     
            /* -------------------------------------------------------------------------
                 ---------------------------------- computer code---------------------------
                  --------------------------------------------------------------------------*/
+        
      
     if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   // true for mobile device
 
 
         if(sidebarClosed==true) 
-             {openSidebarMobile();} else {closeSidebarComputer();} }
+             {openSidebarMobile(); } else {closeSidebarMobile();} }
                      
                  
               
@@ -429,16 +529,27 @@ var passwordHashed = -314610215;
         function openSidebarMobile(){
             
                 
-                sidebar.style.width = "100vw";
+                mobileSidebar.style.width = "100vw";
                    mainContent.style.marginLeft = "100vw"; 
             sidebarClosed= false;
                    console.log("Sidebar is closed: " + toString(sidebarClosed))
                  
              }   
-         
+          function closeSidebarMobile(){
+                 mobileSidebar.style.width = "0";
+              mainContent.style.marginLeft = "0";
+                 sidebarClosed= true;
+              console.log( "Sidebar is closed: " + toString(sidebarClosed))
+   } 
+                     
     </script>
  
-    <footer class="footer-basic-centered">
+  
+             </div>
+     
+    </div>
+    
+       <footer id="footer">
 
 			
             <p id="footerDes">Cheesy jokes. Cheesy merch. <b>shopmrcheese.</b></p>
@@ -457,8 +568,7 @@ var passwordHashed = -314610215;
 			<p class="footer-company-name">SY + JT &copy; 2018</p>
 
 		</footer>
-             </div>
-      
+    </div>
    
     
 </body>

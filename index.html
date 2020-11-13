@@ -3,6 +3,31 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+          #footer {
+              background-color: black;
+            color: white;
+    
+            border-color: #c79d1e;
+            border-width: 5px;
+            border-style: solid;
+            position: absolute;
+            text-align: center;
+         
+           
+            bottom:0;
+         
+            width: 100vw;
+            height:17vh;
+        }
+        #mainContent {
+            padding-bottom: 14vh;
+        }
+         #mainContentWrapper {
+            display: none;
+            font-family: verdana;
+              min-height: 100%;
+             position: relative;
+        }
         #body {
             font-family: Verdana;
             background-color: white;
@@ -14,11 +39,7 @@
             width: 100vw;
             background-color: #E4E800;
         }
-        #mainContentWrapper {
-            display: none;
-            font-family: verdana;
-        }
-      
+     
         #verify-box {
             width: 30vw;
             margin: auto;
@@ -193,16 +214,78 @@ position: fixed;
        <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
        <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
        <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
-       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div>        
+       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div>    
+               <div id="mobileSidebar">
+       <br/>
+       <div style="height: 7vh;"></div>
+     <li><a class="links1Mob" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
+       <li><a class="links1Mob" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
+       <li> <a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
+       <li ><a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
+       <li><a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li>
+         <style>
+              #mobileSidebar {
+            width: 0;
+            height: 100vh;
+            float: left;
+            background-color: black;
+            color: white;
+            z-index: 99;
+            position: fixed;
+            
+            display: block;
+            transition: 0.5s;
+             overflow-x: hidden;
+            text-align:center;
+     
+        
+        
+        }
+              .links1Mob {
+            color: white;
+               text-decoration-line: none;
+               font-size: 4vh;
+               padding-top:15px;
+            
+               border-style:none;
+                  display: inline-block;
+        }
+         .links1Mob:visited {
+         color: white;
+        }
+        .links1Mob:hover {
+            text-align: center;
+            transition: 0.5s;
+            color: white;
+         
+         background-color: black;
+            border-color: #c79d1e;
+            border-radius: 15px;
+            border-style: solid;
+             display: inline-block;
+  
+
+            font-size: 7vh;
+            padding: 20px;
+            
+        }</style></div>    
 <div id="mainContent">
     <div style="height:10vh"></div>
-            <div id="text1">
+    <div id="computerVersion">          <div id="text1">
             
             <h1>Welcome!</h1> 
     <p style="font-size: 20px">This website is dedicated to a very special person (our victim). <br/>This website is used to sell his merch and annoy him.<br/>
         There will be free sticker packs and many other features that he disapproves.  </p> <h2>Enjoy!</h2>
                 <br/></div>
+            </div>
+    <div id="mobileVersion">          <div id="text1">
             
+            <h1>Welcome!</h1> 
+    <p style="font-size: 20px">This website is dedicated to a very special person (our victim). <br/>This website is used to sell his merch and annoy him.<br/>
+        There will be free sticker packs and many other features that he disapproves.  </p> <h2>Enjoy!</h2>
+                <br/></div>
+            </div>
+  
             </div>
     <footer class="footer-basic-centered">
 
@@ -224,17 +307,13 @@ position: fixed;
 
 		</footer>
              </div>
-    
-        <script>
-         window.onload = function (){var signIn =Cookies.get("signIn");
+    <script id="document-specific-code">
+        window.onload = function (){var signIn =Cookies.get("signIn");
                                    if (signIn != "true"){
                                         
                                    } else {unlock();}}
         
-// declare th detect mobile function
-function detectMob() {
-    return ( window.innerHeight > window.innerLength );
-  }
+
 var passwordHashed = -314610215;
         
     var backupPassword = -934175501;     
@@ -270,7 +349,7 @@ var passwordHashed = -314610215;
  
             var input = stringToHash(document.getElementById("verify-box").value);
             
-            if (input == backupPassword){unlock();
+            if (input == passwordHashed){unlock();
                                         Cookies.set('signIn', "true", { expires: 1 });} 
           else {
                                             document.getElementById("updateP").innerHTML="Wrong passcode.";
@@ -322,28 +401,64 @@ var passwordHashed = -314610215;
                                             }
                                         }
         })
+             </script>
+    
+        <script>
+          const sidebar = document.getElementById("sidebar");
+            const mobileSidebar = document.getElementById("mobileSidebar");
+
+             window.onload = function(){  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+ const isMobile = true;
+             console.log(isMobile);
+                 document.getElementById("mobileVersion").style.display = "block";
+                 document.getElementById("computerVersion").style.display = "none";
+                
+                   
+    console.log( "Computer version " + document.getElementById("computerVersion").style.display)
+    console.log( "Mobile version " + document.getElementById("mobileVersion").style.display)
+                 document.getElementById("mobileSidebar").style.display= "block";
+                       document.getElementById("sidebar").style.display= "none";
+                 
+                 
+}else{
+  // false for not mobile device
+const isMobile = false;
+console.log(isMobile)
+      document.getElementById("mobileVersion").style.display = "none";
+                 document.getElementById("computerVersion").style.display = "block";
+  
+    console.log("Computer version " +  document.getElementById("computerVersion").style.display)
+    console.log("Mobile version " +  document.getElementById("mobileVersion").style.display)
+      document.getElementById("mobileSidebar").style.display= "none";
+                       document.getElementById("sidebar").style.display= "block";
+}}
+
+ 
+     
              
             /* -----------------------------------------------------------------
             -----------------------sidebar click-----------------------
             ------------------------------------------------------------*/
             
              var mainContent = document.getElementById("mainContent");
-                 const sidebar = document.getElementById("sidebar");
+                
                var sidebarClosed = true;
-  
+     function toggleSidebar(){
+     
            /* -------------------------------------------------------------------------
                 ---------------------------------- computer code---------------------------
                  --------------------------------------------------------------------------*/
-        function toggleSidebar(){
         
-           /* -------------------------------------------------------------------------
-                ---------------------------------- computer code---------------------------
-                 --------------------------------------------------------------------------*/
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+     
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+
+
         if(sidebarClosed==true) 
-             {openSidebarMobile();} else {closeSidebarComputer();} 
+             {openSidebarMobile(); } else {closeSidebarMobile();} }
                      
-                 }
+                 
               
                   else {
                       if(sidebarClosed==true) {openSidebarComputer();} else {closeSidebarComputer();} 
@@ -354,54 +469,34 @@ var passwordHashed = -314610215;
     
             }}
         function openSidebarComputer(){
-            
-                
-                sidebar.style.width = "30vw";
+  sidebar.style.width = "30vw";
                    mainContent.style.marginLeft = "30vw"; 
             sidebarClosed= false;
                    console.log("Sidebar is closed: " + toString(sidebarClosed))
-            
-       
-          
-             
-
-                 
-             } 
+      } 
              function closeSidebarComputer(){
                   sidebar.style.width = "0";
               mainContent.style.marginLeft = "0";
                  sidebarClosed= true;
               console.log( "Sidebar is closed: " + toString(sidebarClosed))
-                 
-               
-                
-               
-             
-           
-           
-             } 
+   } 
                          
         function openSidebarMobile(){
             
                 
-                sidebar.style.width = "100vw";
+                mobileSidebar.style.width = "100vw";
                    mainContent.style.marginLeft = "100vw"; 
             sidebarClosed= false;
                    console.log("Sidebar is closed: " + toString(sidebarClosed))
-            
-       
-          
-             
-
                  
-             } 
-     
-  
-                                                                   
-         
-         
+             }   
+          function closeSidebarMobile(){
+                 mobileSidebar.style.width = "0";
+              mainContent.style.marginLeft = "0";
+                 sidebarClosed= true;
+              console.log( "Sidebar is closed: " + toString(sidebarClosed))
+   } 
+                     
     </script>
-    
-   
     
 </body>
