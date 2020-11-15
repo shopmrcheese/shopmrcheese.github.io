@@ -1,10 +1,10 @@
+
 <!DOCTYPE HTML>
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,700&display=swap" rel="stylesheet">
     <style>
-        
         #body {
             font-family: Verdana;
             background-color: white;
@@ -12,7 +12,7 @@
       
     
         #mainContentWrapper {
-            display: none;
+   
             font-family: verdana;
         }
       
@@ -28,7 +28,8 @@
             text-align: center;
         }
         
-       #mainContent {
+    
+         #mainContent {
          font-family: "Open Sans", sans-serif;
             background-color:white;
             
@@ -97,6 +98,8 @@
             height:20vh;
             height:20%;
              text-align: center;
+           
+             
         }
              .links1 {
             color: white;
@@ -177,37 +180,73 @@ position: fixed;
    
     </div>
  </header>
-   <div id="sidebar">
-         <div style="height: 7vh;"></div>
+         <div id="sidebar" style="display:none;">
+       <br/>
+       <div style="height: 7vh;"></div>
      <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
        <li><a class="links1" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
-       <li> <a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Sticker Packs</b></a></li>
-       <li ><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
-       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Policies</b></a></li></div> 
-            <div id="mainContent">
+      
+       <li ><a class="links1" href="contact.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
+       <li><a class="links1" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;"><form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+</b></a></li></div>   
+         <div id="mobileSidebar">
+       <br/>
+       <div style="height: 7vh;"></div>
+     <li><a class="links1Mob" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
+       <li><a class="links1Mob" href="merch.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Merch</b></a></li>
+      
+       <li ><a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Contact</b></a></li>
+       <li><a class="links1Mob" href=""><b style = "font-color: white; font-family: verdana;  font-size: inherit;"><form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" >
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>
+           </b></a></li></div>
+             <div id="mainContent">
         
                 <div style="height:10vh;"></div>
            <div style="text-align: center;"> <h1>Sorry, something went wrong.</h1>
                 <h3>Your request could not be fulfilled because:</h3>
                 <br/>
-                <p><b>·</b>there was not enough stock to meet your request (seriously how many clothes does a person need???)</p>
+                <p><b>·</b>there was <b>not enough stock</b> to meet your request (seriously how many clothes does a person need???)</p>
                 <p><b>·</b>not enough balance??? check your balance</p>
                 <p><b>·</b>seriously, I'm not a PayPal expert. I'm just a kid locked in SY's basement.<br/><br/> If you need help, try contacting Paypal, or if its a issue at our side, contact one of the Developers.</p>
                <p><b>·</b>Now that all that is said and done, please rescue me im in a house at 100 Do-</p>
-               <p><b>RESUMING NORMAL PROGRAMMING</b>  <var>(running shutoffnetwork.exe)</var></p>
+               
                 
                 </div>
             </div>
-              <script>
          
-        
-// declare th detect mobile function
-function detectMob() {
-    return ( window.innerHeight > window.innerLength );
-  }
-var passwordHashed = -314610215;
-        
+               <script>
+          const sidebar = document.getElementById("sidebar");
+            const mobileSidebar = document.getElementById("mobileSidebar");
+
+             window.onload = function(){  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+ const isMobile = true;
+             console.log(isMobile);
           
+                   
+
+                 document.getElementById("mobileSidebar").style.display= "block";
+                       document.getElementById("sidebar").style.display= "none";
+                 
+                 
+}else{
+  // false for not mobile device
+const isMobile = false;
+console.log(isMobile)
+
+ 
+      document.getElementById("mobileSidebar").style.display= "none";
+                       document.getElementById("sidebar").style.display= "block";
+}}
 
  
      
@@ -217,18 +256,23 @@ var passwordHashed = -314610215;
             ------------------------------------------------------------*/
             
              var mainContent = document.getElementById("mainContent");
-                 const sidebar = document.getElementById("sidebar");
+                
                var sidebarClosed = true;
      function toggleSidebar(){
-        
+     
            /* -------------------------------------------------------------------------
                 ---------------------------------- computer code---------------------------
                  --------------------------------------------------------------------------*/
-        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+        
+     
+    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  // true for mobile device
+
+
         if(sidebarClosed==true) 
-             {openSidebarMobile();} else {closeSidebarComputer();} 
+             {openSidebarMobile(); } else {closeSidebarMobile();} }
                      
-                 }
+                 
               
                   else {
                       if(sidebarClosed==true) {openSidebarComputer();} else {closeSidebarComputer();} 
@@ -254,24 +298,23 @@ var passwordHashed = -314610215;
         function openSidebarMobile(){
             
                 
-                sidebar.style.width = "100vw";
+                mobileSidebar.style.width = "100vw";
                    mainContent.style.marginLeft = "100vw"; 
             sidebarClosed= false;
                    console.log("Sidebar is closed: " + toString(sidebarClosed))
                  
              }   
-         
+          function closeSidebarMobile(){
+                 mobileSidebar.style.width = "0";
+              mainContent.style.marginLeft = "0";
+                 sidebarClosed= true;
+              console.log( "Sidebar is closed: " + toString(sidebarClosed))
+   } 
+                   
+                     
     </script>
     
-<div id="main">
-          
-    
-    
-    
-    
-    
-    
-            </div>
+ 
     <footer class="footer-basic-centered">
 
 			

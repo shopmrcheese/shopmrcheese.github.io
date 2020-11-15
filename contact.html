@@ -10,10 +10,7 @@
         }
       
     
-        #mainContentWrapper {
-   
-            font-family: verdana;
-        }
+      
       
         #verify-box {
             width: 30vw;
@@ -27,14 +24,12 @@
             text-align: center;
         }
         
-    
-         #mainContent {
-         font-family: "Open Sans", sans-serif;
+        #main {
+            font-family: verdana;
             background-color:white;
             
             transition: 0.5s;
             z-index:1;
-             min-height: 80vh;
         }
            #link {
             float:left;
@@ -62,7 +57,8 @@
         
         }
        
-        #text1 {text-align: center;
+        #text1 {
+            text-align: center;
         }
        
 
@@ -97,8 +93,6 @@
             height:20vh;
             height:20%;
              text-align: center;
-           
-             
         }
              .links1 {
             color: white;
@@ -128,7 +122,35 @@
             padding: 20px;
             
         }
-            
+        
+         
+        #mainContent {
+            padding-bottom: 14vh;
+            font-family: "Open Sans", sans-serif;
+        }
+         #mainContentWrapper {
+       
+            font-family: verdana;
+              min-height: 100%;
+             position: relative;
+        }  
+          #footer {
+              background-color: black;
+            color: white;
+    
+            border-color: #c79d1e;
+            border-width: 5px;
+            border-style: solid;
+            position: absolute;
+            text-align: center;
+         
+           font-family: verdana;
+            bottom:0;
+         
+            width: 100vw;
+            height:17vh;
+              
+        }
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FJMB272K3V"></script>
@@ -179,7 +201,7 @@ position: fixed;
    
     </div>
  </header>
-          <div id="sidebar" style="display:none;">
+             <div id="sidebar" style="display:none;">
        <br/>
        <div style="height: 7vh;"></div>
      <li><a class="links1" href="index.html"><b style = "font-color: white; font-family: verdana;  font-size: inherit;">Home</b></a></li>
@@ -207,16 +229,204 @@ position: fixed;
 <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
 </form>
            </b></a></li></div>
-            <div id="mainContent">
-        
-                <div style="height:10vh;"></div>
-           <div style="text-align: center;"> <h1>Hooray, success!</h1><br/>
-              <p>Now, if only you could help me do my exams...</p>
-              
+         <style>
+              #mobileSidebar {
+            width: 0;
+            height: 100vh;
+            float: left;
+            background-color: black;
+            color: white;
+            z-index: 99;
+            position: fixed;
             
-             
-                </div></div>
+            display: block;
+            transition: 0.5s;
+             overflow-x: hidden;
+            text-align:center;
+     
+        
+        
+        }
+              .links1Mob {
+            color: white;
+               text-decoration-line: none;
+               font-size: 4vh;
+               padding-top:15px;
+            
+               border-style:none;
+                  display: inline-block;
+        }
+         .links1Mob:visited {
+         color: white;
+        }
+        .links1Mob:hover {
+            text-align: center;
+            transition: 0.5s;
+            color: white;
          
+         background-color: black;
+            border-color: #c79d1e;
+            border-radius: 15px;
+            border-style: solid;
+             display: inline-block;
+  
+
+            font-size: 7vh;
+            padding: 20px;
+            
+        }
+             
+                 .links1Adap {
+            color: black;
+               text-decoration-line: none;
+               font-size: 2vw;
+               padding-top:15px;
+            
+               border-style:none;
+                  display: inline-block;
+        }
+         .links1Adap:visited {
+         color: black;
+        }
+        .links1Adap:hover {
+            text-align: center;
+            transition: 0.5s;
+            color: white;
+         
+         background-color: black;
+            border-color: #c79d1e;
+            border-radius: 15px;
+            border-style: solid;
+             display: inline-block;
+  
+
+            font-size: 4vh;
+            padding: 20px;
+            
+        }
+             .links1AdapMob {
+            color: black;
+             
+               font-size: 4vh;
+               padding-top:15px;
+            
+               border-style:none;
+                  display: inline-block;
+        }
+         .links1AdapMob:visited {
+         color: black;
+        }
+        .links1AdapMob:hover {
+            text-align: center;
+            transition: 0.5s;
+            color: black;
+         
+         background-color: white;
+            border-color: #c79d1e;
+            border-radius: 15px;
+            border-style: solid;
+             display: inline-block;
+  
+
+            font-size: 14vh;
+            padding: 20px;
+            
+        }
+             </style></div>    
+    <div id="mainContent">
+        
+                  <div style="height: 10vh;"></div>
+            <style>      #here {
+            color:white;
+        }
+        .do {background-color: black;
+            font-family: Verdana;
+            text-align: center;
+            color: white;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 15%;
+            padding: 10px;
+            border: 40px;}
+        #doButton9090key9 {
+          margin: auto;  
+        }
+      
+        #buttonExitDiv9 {
+            top: 0;
+            float: right;
+            
+        }
+        #modal_container {
+            border-width: thick;
+            height:28vh;
+            
+            background-color: black;
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            border: 40px;
+            margin: 3px 1px;
+            width:70vw;
+            margin: auto;
+            z-index:900;
+            position:fixed;
+            bottom:35vh;
+            left:15vw;}
+             #img {
+           right:50%;
+            right: 50vw;
+        }
+        #popup {
+            display: none;
+                }</style>
+        <div id="popup">  <div id="modal_container" class="modal_container" style="z-index: 555;
+        border-color:#FFCA28;
+border-width: 3px; /* this allows you to adjust the thickness */
+border-style: solid;"><div class="modal_content"><div class="esc-size-guide"><h5 class="esc-size-guide--title" id="here1">Thank you!</h5>
+<h6 id="here">We love to hear from you! Thank you for your support!</h6><div id="buttonExitDiv9" onclick="closeModal();"><button id="exitPopupButton9"  style="border-radius: 0px;
+        background-color: black; color: white; text-align:center; width:6vw;   height:4vh;right:33vw; margin:auto; position:absolute;" >OK</button>
+    <br/>
+            <br/></div></div></div></div></div>
+        <script>
+             var popup =document.getElementById("popup");
+       function openModal(){
+           popup.style.display = "block";
+        }
+              function closeModal (){
+            popup.style.display = "none";
+        }
+        </script>
+        <div id="computerVersion"><div id="mainText" style="text-align: center;"><h1>Get in touch!</h1><h2>We'd love to hear from you!</h2><p><br/><h3>You can take these surveys:</h3><a href="https://www.surveymonkey.com/r/CCQZX3Q" target="_blank" class="links1Adap" onclick="openModal();">Give us feedback about our website!</a><br/><a href="https://www.surveymonkey.com/r/VBQWTW5" target="_blank" class="links1Adap" id="clickers" onclick="openModal();">Give us feedback about our merch!</a><br/><h2>Or you could <a href="mailto:shopmrcheese@gmail.com" target="_blank" class="links1Adap" id="clickers" onclick="openModal();">drop us an email!</a></h2></div></div>
+<div id="mobileVersion"><div id="mainText" style="text-align: center;"><h1>Get in touch!</h1><h2>We'd love to hear from you!</h2><p><br/><h3>You can take these surveys:</h3><a href="https://www.surveymonkey.com/r/CCQZX3Q" target="_blank" class="links1AdapMob" onclick="openModal();">Give us feedback about our website!</a><br/><a href="https://www.surveymonkey.com/r/VBQWTW5" target="_blank" class="links1AdapMob" id="clickers" onclick="openModal();">Give us feedback about our merch!</a><br/><h2>Or you could <a href="mailto:shopmrcheese@gmail.com" target="_blank" class="links1AdapMob" id="clickers" onclick="openModal();">drop us an email!</a></h2></div></div>
+        
+         
+            <div style="height:50vh"></div>
+               <footer id="footer">
+
+			
+            <p id="footerDes">Cheesy jokes. Cheesy merch. <b>shopmrcheese.</b></p>
+
+			<p class="footer-links">
+				<a href="index.html" class="footerLink">Home</a>
+				·
+				<a href="merch.html" class="footerLink">Merch</a>
+				·
+				<a href="#" class="footerLink">Contact</a>
+				·
+				<a href="#" class="footerLink">Policy</a>
+				
+			</p>
+
+			<p class="footer-company-name">SY + JT &copy; 2018</p>
+
+		</footer>
+      
+   
+            </div>
+            
                <script>
           const sidebar = document.getElementById("sidebar");
             const mobileSidebar = document.getElementById("mobileSidebar");
@@ -225,9 +435,12 @@ position: fixed;
   // true for mobile device
  const isMobile = true;
              console.log(isMobile);
-          
+                 document.getElementById("mobileVersion").style.display = "block";
+                 document.getElementById("computerVersion").style.display = "none";
+                
                    
-
+    console.log( "Computer version " + document.getElementById("computerVersion").style.display)
+    console.log( "Mobile version " + document.getElementById("mobileVersion").style.display)
                  document.getElementById("mobileSidebar").style.display= "block";
                        document.getElementById("sidebar").style.display= "none";
                  
@@ -236,8 +449,11 @@ position: fixed;
   // false for not mobile device
 const isMobile = false;
 console.log(isMobile)
-
- 
+      document.getElementById("mobileVersion").style.display = "none";
+                 document.getElementById("computerVersion").style.display = "block";
+  
+    console.log("Computer version " +  document.getElementById("computerVersion").style.display)
+    console.log("Mobile version " +  document.getElementById("mobileVersion").style.display)
       document.getElementById("mobileSidebar").style.display= "none";
                        document.getElementById("sidebar").style.display= "block";
 }}
@@ -308,28 +524,9 @@ console.log(isMobile)
                      
     </script>
     
- 
-    <footer class="footer-basic-centered">
-
-			
-            <p id="footerDes">Cheesy jokes. Cheesy merch. <b>shopmrcheese.</b></p>
-
-			<p class="footer-links">
-				<a href="index.html" class="footerLink">Home</a>
-				·
-				<a href="merch.html" class="footerLink">Merch</a>
-				·
-				<a href="#" class="footerLink">Contact</a>
-				·
-				<a href="#" class="footerLink">Policy</a>
-				
-			</p>
-
-			<p class="footer-company-name">SY + JT &copy; 2018</p>
-
-		</footer>
+            
+  
              </div>
-      
    
     
 </body>
