@@ -444,7 +444,8 @@ border-style: solid;"><div class="modal_content"><div class="esc-size-guide"><h5
     console.log( "Mobile version " + document.getElementById("mobileVersion").style.display)
                  document.getElementById("mobileSidebar").style.display= "block";
                        document.getElementById("sidebar").style.display= "none";
-                 
+                  var remarks=["Did you know that 200% of your data goes to Facebook?", "Guess the percentage of your purchase that is going to arms dealers in Southern Malawi!", "Mark Zuckerberg now know your address. Good luck!"];
+                 console.log("Fun fact: " + remarks[Math.random * Math.floor(3)])
                  
 }else{
   // false for not mobile device
@@ -457,6 +458,8 @@ console.log(isMobile)
     console.log("Mobile version " +  document.getElementById("mobileVersion").style.display)
       document.getElementById("mobileSidebar").style.display= "none";
                        document.getElementById("sidebar").style.display= "block";
+     var remarks=["Did you know that 200% of your data goes to Facebook?", "Guess the percentage of your purchase that is going to arms dealers in Southern Malawi!", "Mark Zuckerberg now know your address. Good luck!"];
+                 console.log("Fun fact: " + remarks[Math.random * Math.floor(3)])
 }}
 
  
